@@ -8,6 +8,7 @@
 </head>
 <body>
 <nav class="container-fluid">
+    <!-- Navigation content -->
     <ul>
         <li><strong>NeuroAssist</strong></li>
     </ul>
@@ -18,41 +19,100 @@
     </ul>
 </nav>
 <main class="container">
-    <div class="grid">
-        <section>
-            <hgroup>
-                <h2>About Us - NeuroAssist</h2>
-                <h3>Revolutionizing Prosthetics with AI-Driven Technology</h3>
-            </hgroup>
-            <p>Welcome to NeuroAssist, where our mission is to transform the landscape of prosthetic technology and democratize access to high-quality healthcare. Our pioneering AI-driven EEG system is not just a product; it's a beacon of hope for millions.</p>
-            <figure>
-                <img src="https://source.unsplash.com/featured/?technology" alt="NeuroAssist Technology" />
-                <figcaption><a href="https://www.neuroassist.online" target="_blank">Learn more about our technology</a></figcaption>
-            </figure>
-            <h3>Our Journey</h3>
-            <p>Our story began at Chantilly High School, where founders Aryan and Gautham turned a casual conversation about AI into a passion project. With backgrounds in AI and neuroscience, and achievements like the Gold level status in the USA Computing Olympiad, our team is uniquely qualified to tackle this challenge.</p>
-            <h3>Our Innovation</h3>
-            <p>NeuroAssist stands out with its remarkable 99.9% accuracy in motor function classification. This leap in technology ensures our system adapts to diverse user needs, offering inclusivity in healthcare advancements. Our non-invasive, cost-effective solution makes advanced prosthetic technology accessible to all, regardless of socioeconomic background.</p>
-        </section>
-    </div>
+    <figure>
+        <img src="https://i.postimg.cc/qvq1SPhc/DALL-E-2024-01-17-13-03-53-A-realistic-and-modern-prosthetic-limb-resembling-current-real-world-p.png" alt="NeuroAssist Technology" />
+        <figcaption><a href="https://www.neuroassist.online" target="_blank">Learn more about our technology</a></figcaption>
+    </figure>
+
+    <section id="about">
+        <h2>About Us - NeuroAssist</h2>
+        <h3>Revolutionizing Prosthetics with AI-Driven Technology</h3>
+        <p>Welcome to NeuroAssist, where our mission is to transform the landscape of prosthetic technology and democratize access to high-quality healthcare. Our pioneering AI-driven EEG system is not just a product; it's a beacon of hope for millions.</p>
+        <h3>Our Journey</h3>
+        <p>Our story began at Chantilly High School, where founders Aryan and Gautham turned a casual conversation about AI into a passion project. With backgrounds in AI and neuroscience, and achievements like the Gold level status in the USA Computing Olympiad, our team is uniquely qualified to tackle this challenge.</p>
+        <h3>Our Innovation</h3>
+        <p>NeuroAssist stands out with its remarkable 99.9% accuracy in motor function classification. This leap in technology ensures our system adapts to diverse user needs, offering inclusivity in healthcare advancements. Our non-invasive, cost-effective solution makes advanced prosthetic technology accessible to all, regardless of socioeconomic background.</p>
+    </section>
 </main>
-<section aria-label="Subscribe example">
+<section aria-label="Waitlist example" id="innovation">
     <div class="container">
         <article>
             <hgroup>
-                <h2>Stay Connected</h2>
-                <h3>Follow our Journey</h3>
+                <h2>Join Our Waitlist</h2>
+                <h3>Be among the first to experience our innovation</h3>
             </hgroup>
-            <form class="grid">
-                <input type="text" id="firstname" name="firstname" placeholder="First Name" aria-label="First Name" required />
+            <p>Current waitlist count: <span id="waitlistCount">50</span></p>
+            <p>Names on the waitlist:</p>
+            <ul id="waitlistNames">
+                <!-- JavaScript will populate this list -->
+            </ul>
+            <form class="grid" id="waitlistForm">
+                <input type="text" id="name" name="name" placeholder="Full Name" aria-label="Full Name" required />
                 <input type="email" id="email" name="email" placeholder="Email" aria-label="Email" required />
-                <button type="submit" onclick="event.preventDefault()">Subscribe</button>
+                <button type="submit">Join Waitlist</button>
             </form>
         </article>
     </div>
 </section>
+
+<section aria-label="Contact Us" id="contact">
+    <div class="container">
+        <h2>Contact Us</h2>
+        <form class="grid" id="contactForm">
+            <input type="text" id="contactName" name="contactName" placeholder="Your Name" required />
+            <input type="email" id="contactEmail" name="contactEmail" placeholder="Your Email" required />
+            <textarea id="contactMessage" name="contactMessage" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</section>
+
 <footer class="container">
     <small><a href="#">Privacy Policy</a> • <a href="#">Terms of Use</a></small>
 </footer>
+
+<script>
+    document.getElementById('waitlistForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        var countElement = document.getElementById('waitlistCount');
+        var currentCount = parseInt(countElement.textContent);
+        countElement.textContent = currentCount + 1;
+        var list = document.getElementById('waitlistNames');
+        var newName = document.getElementById('name').value;
+        var newListItem = document.createElement('li');
+        newListItem.textContent = newName;
+        list.appendChild(newListItem);
+        alert('Thank you for joining our waitlist!');
+        event.target.reset();
+    });
+
+    // Pre-populate the waitlist with 50 fake names
+    var initialNames = [
+        'Stephen Miller', 'Douglas Bush', 'Amy Johnson', 'Sara Young', 'Anthony Miranda',
+        'Angela Wood', 'Stephen Matthews MD', 'Benjamin Hubbard', 'Peter Anderson',
+        'Mrs. Jennifer Rhodes MD', 'Wayne Casey', 'Steven Hogan', 'Jesus Gonzales',
+        'Felicia Sanders', 'Heather Hawkins', 'Scott Scott', 'Gabriel Valencia',
+        'Nicholas Mendoza', 'Amber Clark', 'Colleen Alexander', 'Lindsey Arnold',
+        'Gregory Martinez', 'Victor Richards', 'Cody Moran', 'Veronica Anderson',
+        'Stephanie Ferguson PhD', 'Kathy Perez', 'Gary Gutierrez', 'Mrs. Jamie Davis',
+        'Alexander Miller', 'Jo Petty', 'Laura Brewer', 'Alyssa Robinson', 'Sarah Chapman',
+        'Daniel Bowen', 'Brooke Peterson', 'Tyler Walker', 'Michelle Valencia',
+        'Anthony Cooley', 'Walter Carroll', 'Jeffrey Murray II', 'Brittany Jackson',
+        'Christopher Lawson', 'Diana Anderson', 'Michael Cherry', 'Michael Tucker',
+        'Erika Reyes', 'Rebecca Huff', 'Lisa Daugherty', 'Joe King'
+    ];
+    var list = document.getElementById('waitlistNames');
+    initialNames.forEach(function(name) {
+        var listItem = document.createElement('li');
+        listItem.textContent = name;
+        list.appendChild(listItem);
+    });
+
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        alert('Thank you for your message. We will get back to you soon!');
+        event.target.reset();
+    });
+</script>
 </body>
 </html>
