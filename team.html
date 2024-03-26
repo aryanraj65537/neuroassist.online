@@ -6,11 +6,6 @@
     <title>Our Team - NeuroAssist</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <meta property="og:image" content="http://neuroassist.online/team_images/gram.png">
-    <script>
-        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-            alert("Please switch to desktop site.");
-        }
-    </script>
 </head>
 <body class="flex flex-col min-h-screen">
     <!-- Navigation -->
@@ -78,6 +73,10 @@
     </footer>
 
     <script>
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            alert("Please switch to desktop site.");
+        }
+        
         const titles = ['Our Story', 'Gautham\'s Story', 'Aryan\'s Story', 'Sriram\'s Story', 'Arnav\'s Story', 'Rishi\'s Story', 'Eeshan\'s Story'];
         const stories = [
             'Our story began at Chantilly High School, where founders Aryan and Gautham turned a casual conversation about AI into a passion project. Recognizing the need for interdisciplinary collaboration, Aryan and Gautham reached out to Arnav, a passionate researcher from Bergen County Academies with a deep interest in neuroscience, to bring a holistic perspective to their project. With backgrounds in AI and neuroscience, and achievements like the Gold level status in the USA Computing Olympiad, our team is uniquely qualified to tackle this challenge.',
