@@ -3,61 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 0 20px;
-        }
-        .featured-person {
-            margin-bottom: 30px;
-            text-align: center;
-        }
-        .featured-person img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-        }
-        .featured-person h2 {
-            margin-top: 10px;
-        }
-        .featured-person p {
-            margin-top: 5px;
-        }
-    </style>
+    <title>Our Team - NeuroAssist</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-    <div class="container">
-        <div class="featured-person">
-            <img src="default-image.jpg" alt="Default Image">
-            <h2>Eeshan Dandamudi</h2>
-            <p>Lead CEO</p>
-            <p>NeuroAssist is the brainchild of Eeshan Dandamudi. It is his initiative and creation.</p>
+<body class="flex flex-col min-h-screen">
+    <!-- Navigation -->
+    <nav class="flex justify-between items-center bg-gray-800 text-white p-4">
+        <a href="index.html" class="font-semibold text-xl">NeuroAssist</a>
+        <div>
+            <a href="team.html" class="px-4">About Us</a>
+            <a href="blog.html" class="px-4">Blog</a>
+            <a href="shop.html" class="px-4">Shop</a>
+            <a href="https://forms.gle/pxLkbwJqiz9q2NRE9" target="_blank" class="px-4">Apply</a>
         </div>
-        <div class="featured-person">
-            <img src="default-image.jpg" alt="Default Image">
-            <h2>Aryon Roj</h2>
-            <p>Other CEO</p>
-            <p>Aryan excels at leadership and utilizing his technology skills for sigma purposes.</p>
-        </div>
-        <div class="featured-person">
-            <img src="default-image.jpg" alt="Default Image">
-            <h2>Rishi Jagarlapudi</h2>
-            <p>Super Duper CEO</p>
-            <p>Bro is the GOAT</p>
-        </div>
-        <div class="featured-person">
-            <img src="default-image.jpg" alt="Default Image">
-            <h2>Gautham Ramachandran</h2>
-            <p>Eeshan's sidekick</p>
-            <p>Gautham excels at assisting Eeshan like the good little associate that he is.</p>
-        </div>
-    </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow container mx-auto p-4 text-center">
+        <section id="storySection" class="mb-12">
+            <h2 id="storyTitle" class="text-3xl font-bold mb-6">Our Story</h2>
+            <p id="storyText" class="text-lg mx-auto leading-relaxed">Our story began at Chantilly High School, where founders Aryan and Gautham turned a casual conversation about AI into a passion project. Recognizing the need for interdisciplinary collaboration, Aryan and Gautham reached out to Arnav, a passionate researcher from Bergen County Academies with a deep interest in neuroscience, to bring a holistic perspective to their project. With backgrounds in AI and neuroscience, and achievements like the Gold level status in the USA Computing Olympiad, our team is uniquely qualified to tackle this challenge.</p>
+        </section>
+
+        <section>
+            <h2 class="text-3xl font-bold mb-8">Our Team</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <!-- Top Row: Gautham, Aryan, Sriram -->
+                <div onmouseover="changeStory(1)" onmouseout="changeStory(0)" class="flex flex-col items-center">
+                    <img src="team_images/gram.png" alt="Gautham Ramachandran" class="rounded-full w-32 h-32 mb-4">
+                    <h2 class="font-bold">Gautham Ramachandran</h2>
+                    <p>Co-founder and CEO</p>
+                </div>
+                <div onmouseover="changeStory(2)" onmouseout="changeStory(0)" class="flex flex-col items-center">
+                    <img src="team_images/aryan.jpg" alt="Aryan Raj" class="rounded-full w-32 h-32 mb-4">
+                    <h2 class="font-bold">Aryan Raj</h2>
+                    <p>Co-founder and CFO</p>
+                </div>
+                <div onmouseover="changeStory(3)" onmouseout="changeStory(0)" class="flex flex-col items-center">
+                    <img src="team_images/sriram.jpg" alt="Sriram Nallani" class="rounded-full w-32 h-32 mb-4">
+                    <h2 class="font-bold">Sriram Nallani</h2>
+                    <p>CTO</p>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Bottom Row: Arnav, Rishi, Eeshan -->
+                <div onmouseover="changeStory(4)" onmouseout="changeStory(0)" class="flex flex-col items-center">
+                    <img src="team_images/arnav.png" alt="Arnav Adepu" class="rounded-full w-32 h-32 mb-4">
+                    <h2 class="font-bold">Arnav Adepu</h2>
+                    <p>Lead Researcher</p>
+                </div>
+                <div onmouseover="changeStory(5)" onmouseout="changeStory(0)" class="flex flex-col items-center">
+                    <img src="team_images/rishi.png" alt="Rishi Jagarlapudi" class="rounded-full w-32 h-32 mb-4">
+                    <h2 class="font-bold">Rishi Jagarlapudi</h2>
+                    <p>Developer</p>
+                </div>
+                <div onmouseover="changeStory(6)" onmouseout="changeStory(0)" class="flex flex-col items-center">
+                    <img src="team_images/eeshan.png" alt="Eeshan Dandamudi" class="rounded-full w-32 h-32 mb-4">
+                    <h2 class="font-bold">Eeshan Dandamudi</h2>
+                    <p>Researcher</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center p-4 mt-4">
+        Copyright © 2024 Aryan Raj. All rights reserved.
+    </footer>
+
+    <script>
+        const titles = ['Our Story', 'Gautham\'s Story', 'Aryan\'s Story', 'Sriram\'s Story', 'Arnav\'s Story', 'Rishi\'s Story', 'Eeshan\'s Story'];
+        const stories = [
+            'Our story began at Chantilly High School, where founders Aryan and Gautham turned a casual conversation about AI into a passion project. Recognizing the need for interdisciplinary collaboration, Aryan and Gautham reached out to Arnav, a passionate researcher from Bergen County Academies with a deep interest in neuroscience, to bring a holistic perspective to their project. With backgrounds in AI and neuroscience, and achievements like the Gold level status in the USA Computing Olympiad, our team is uniquely qualified to tackle this challenge.',
+            "Ever since clinching the Gold status in the USA Computing Olympiad, I've been fascinated by the power of algorithms and competitive programming. The thrill of solving complex problems efficiently has always driven me. However, I yearned to channel this passion into something impactful, something that bridges the gap between theoretical algorithms and real-world applications. That's where AI came into the picture for me. It was during a serendipitous discussion with Aryan Raj that the idea of NeuroAssist was born. Together, we embarked on this journey to revolutionize how we interact with technology, making life-changing tools accessible to everyone.",
+            "My adventure into the world of technology started with building portfolio optimization models using machine learning. This passion for applying mathematical concepts to solve real-world challenges soon led me into the realm of competitive programming, where I met Gautham. Our shared vision and complementary skill sets were the perfect ingredients for founding NeuroAssist. It's been an exhilarating journey, translating complex data into meaningful solutions, and I'm excited to see how much further we can push the boundaries of what's possible.",
+            "Developing an ML model from scratch in Java was my first step into the vast world of machine learning. That, combined with my project on enhancing C++ programs' execution times through parallelism, which won the school science fair, laid the groundwork for my role at NeuroAssist. Here, I've had the opportunity to significantly advance our machine learning models, pushing the efficiency and accuracy to new heights. It's been a rewarding experience seeing our collective efforts make a tangible difference.",
+            "Working with NASA on neuroscience research was an eye-opener for me. It highlighted the immense potential of applying research to solve complex problems. When I learned about NeuroAssist and its mission, I knew I wanted to be part of it. Bringing my research experience to the team, I've been able to contribute to our understanding of neural mechanisms and how we can interface them with technology to improve lives. It's been an inspiring journey, working at the cutting edge of neuroscience and AI.",
+            "Programming games as a kid sparked my interest in coding, but it was the challenge of machine learning that captured my fascination in middle school. Participating in hackathons throughout my teenage years sharpened my skills and showed me the impact of technology. At NeuroAssist, I'm able to combine my love for coding and machine learning to contribute to our groundbreaking models. It's thrilling to be part of a team that's as passionate about making a difference as I am.",
+            "Qualifying for the Virginia State Science and Engineering Fair was a turning point for me, affirming my passion for research. Joining NeuroAssist was a natural step forward, allowing me to apply my research skills towards innovative solutions. Being part of this team has been incredibly fulfilling, knowing that our work has the potential to change lives. I'm eager to continue exploring and contributing to the cutting edge of technology and neuroscience."
+        ];
+
+        function changeStory(num) {
+            const storyTitle = document.getElementById("storyTitle");
+            const storyText = document.getElementById("storyText");
+
+            storyTitle.innerHTML = titles[num];
+            storyText.innerHTML = stories[num];
+        }
+    </script>
 </body>
 </html>
