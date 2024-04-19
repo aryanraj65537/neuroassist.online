@@ -13,8 +13,6 @@
         <a href="index.html" class="font-semibold text-xl">NeuroAssist</a>
         <div>
             <a href="team.html" class="px-4">About Us</a>
-            <a href="blog.html" class="px-4">Blog</a>
-            <a href="shop.html" class="px-4">Shop</a>
             <a href="https://forms.gle/pxLkbwJqiz9q2NRE9" target="_blank" class="px-4">Apply</a>
         </div>
     </nav>
@@ -35,15 +33,15 @@
                     <h2 class="font-bold">Gautham Ramachandran</h2>
                     <p>Cofounder and CEO</p>
                 </div>
+                <div onmouseover="changeStory(3)" onmouseout="changeStory(0)" class="flex flex-col items-center">
+                    <img src="team_images/sriram.jpg" alt="Sriram Nallani" class="rounded-full w-32 h-32 mb-4">
+                    <h2 class="font-bold">Sriram Nallani</h2>
+                    <p>Cofounder and CTO</p>
+                </div>
                 <div onmouseover="changeStory(2)" onmouseout="changeStory(0)" class="flex flex-col items-center">
                     <img src="team_images/aryan.jpg" alt="Aryan Raj" class="rounded-full w-32 h-32 mb-4">
                     <h2 class="font-bold">Aryan Raj</h2>
                     <p>Cofounder and CFO</p>
-                </div>
-                <div onmouseover="changeStory(3)" onmouseout="changeStory(0)" class="flex flex-col items-center">
-                    <img src="team_images/sriram.jpg" alt="Sriram Nallani" class="rounded-full w-32 h-32 mb-4">
-                    <h2 class="font-bold">Sriram Nallani</h2>
-                    <p>CTO</p>
                 </div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -79,9 +77,9 @@
         
         const titles = ['Our Story', 'Gautham\'s Story', 'Aryan\'s Story', 'Sriram\'s Story', 'Arnav\'s Story', 'Rishi\'s Story', 'Eeshan\'s Story'];
         const stories = [
-            'Our story began at Chantilly High School, where founders Aryan and Gautham turned a casual conversation about AI into a passion project. Recognizing the need for interdisciplinary collaboration, Aryan and Gautham reached out to Arnav, a passionate researcher from Bergen County Academies with a deep interest in neuroscience, to bring a holistic perspective to their project. With backgrounds in AI and neuroscience, and achievements like the Gold level status in the USA Computing Olympiad, our team is uniquely qualified to tackle this challenge.',
-            "Ever since clinching the Gold status in the USA Computing Olympiad, I've been fascinated by the power of algorithms and competitive programming. The thrill of solving complex problems efficiently has always driven me. However, I yearned to channel this passion into something impactful, something that bridges the gap between theoretical algorithms and real-world applications. That's where AI came into the picture for me. It was during a serendipitous discussion with Aryan Raj that the idea of NeuroAssist was born. Together, we embarked on this journey to revolutionize how we interact with technology, making life-changing tools accessible to everyone.",
-            "My journey into technology began with a fascination for machine learning, leading me to build models for portfolio optimization. This exploration into financial technologies further expanded when I met Gautham, and together, we founded NeuroAssist. Our shared commitment brought us to a pivotal moment when Rishi Jagarlapudi and I teamed up for a hackathon. Together, we developed a quantum portfolio optimization website, a project that combined our mutual interests in finance and cutting-edge technology. This experience not only solidified my passion for applying tech solutions to financial challenges but also played a crucial role in shaping the direction of NeuroAssist.",
+            'Our story began at Chantilly High School, where founders Gautham, Aryan, and Sriram turned a casual conversation about AI into a passion project. Recognizing the need for interdisciplinary collaboration, Gautham reached out to Arnav, a passionate researcher from Bergen County Academies with a deep interest in neuroscience, to bring a holistic perspective to their project. With backgrounds in AI and neuroscience, and achievements like the Gold level status in the USA Computing Olympiad, our team is uniquely qualified to tackle this challenge.',
+            "Ever since clinching the Gold status in the USA Computing Olympiad, I've been fascinated by the power of algorithms and competitive programming. The thrill of solving complex problems efficiently has always driven me. However, I yearned to channel this passion into something impactful, something that bridges the gap between theoretical algorithms and real-world applications. That's where AI came into the picture for me. It was during a serendipitous discussion with Aryan and Sriram that the idea of NeuroAssist was born. Together, we embarked on this journey to revolutionize how we interact with technology, making life-changing tools accessible to everyone.",
+            "My journey into technology began with a fascination for machine learning, leading me to build models for portfolio optimization. This exploration into financial technologies further expanded when I met Gautham and Sriram, and together, we founded NeuroAssist. Our shared commitment brought us to a pivotal moment when Rishi Jagarlapudi and I teamed up for a hackathon. Together, we developed a quantum portfolio optimization website, a project that combined our mutual interests in finance and cutting-edge technology. This experience not only solidified my passion for applying tech solutions to financial challenges but also played a crucial role in shaping the direction of NeuroAssist.",
             "Developing an ML model from scratch in Java was my first step into the vast world of machine learning. That, combined with my project on enhancing C++ programs' execution times through parallelism, which won the school science fair, laid the groundwork for my role at NeuroAssist. Here, I've had the opportunity to significantly advance our machine learning models, pushing the efficiency and accuracy to new heights. It's been a rewarding experience seeing our collective efforts make a tangible difference.",
             "Working on various neuroscience projects for the mitigation of the disruption of circadian rhythms helped fuel my love for neuroscience. It highlighted the immense potential of applying research to solve complex problems. When I learned about NeuroAssist and its mission, I knew I wanted to be part of it. Bringing my research experience to the team, I've been able to contribute to our understanding of neural mechanisms and how we can interface them with technology to improve lives. It's been an inspiring journey, working at the cutting edge of neuroscience and AI.",
             "Growing up coding games sparked my initial love for programming, but it was my early venture into machine learning during middle school that truly captured my fascination. This newfound passion dovetailed perfectly with my interest in finance, a field ripe for the application of advanced AI techniques to unravel complex problems. My collaboration with Aryan Raj on a portfolio optimization website for a hackathon was a pivotal moment, marrying my twin interests in AI and finance. It underscored the transformative potential of AI in the financial sector, reinforcing my commitment to pushing the boundaries of what's possible. At NeuroAssist, I continue to harness my coding prowess and machine learning expertise, driven by my keen interest in finance, to innovate and contribute to our groundbreaking projects.",
